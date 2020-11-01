@@ -2,8 +2,14 @@
 
 ## Instructions for running the code
 
+To get familiar with the MDP file format, you can view and run generateMDP.py, which is a python script used to generate random MDPs. Specify the number of states and actions, the discount factor, type of mdp (episodic or continuing), and the random seed as command-line arguments to this file. Two examples of how this script can be invoked are given below.
+```
+python generateMDP.py --S 2 --A 2 --gamma 0.90 --mdptype episodic --rseed 0
+python generateMDP.py --S 50 --A 20 --gamma 0.20 --mdptype continuing --rseed 0
+```
+
 Run any of the following commands to execute the planner.py file and obtain the value function for specified algorithm:
-```console
+```
 python planner.py --mdp /home/user/data/mdp-4.txt --algorithm vi
 python planner.py --mdp /home/user/temp/data/mdp-7.txt --algorithm hpi
 python planner.py --mdp /home/user/mdpfiles/mdp-5.txt --algorithm lp
@@ -65,3 +71,5 @@ Here yellow grid cell denotes the start state and white cell denotes the end sta
 ## References
 
 1. https://www.cse.iitb.ac.in/~shivaram/teaching/cs747-a2020/pa-2/programming-assignment-2.html
+2. https://coin-or.github.io/pulp/
+3. https://www.geeksforgeeks.org/python-linear-programming-in-pulp/
